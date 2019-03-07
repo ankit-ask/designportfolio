@@ -297,3 +297,42 @@ header{
     right: 30%;
   }
 }
+
+.scrollDown {
+	position: fixed;
+	font-size: 1rem;
+	bottom: 80px;
+	left: 40px;
+	line-height: 1;
+	letter-spacing: 0.3em;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	color: #fff;
+  z-index: 100;
+  
+  @media screen and (max-width:420px) {
+      left: auto;
+      right: 6.25%;
+      font-size: 0.6rem;
+      bottom: 40px;
+  }
+}
+
+.scrollDown:after {
+	content: "";
+	width: 2px;
+	height: 64px;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+  bottom: -80px;
+  
+  @media screen and (max-width:420px) {
+      height: 32px;
+      bottom: -40px;
+  }
+}
+
