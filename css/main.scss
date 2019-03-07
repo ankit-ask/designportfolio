@@ -5,8 +5,22 @@ $color-main: #FF5252;
 $color-active: #FFF;
 $color-link: #FFF;
 
+$break-small: 420px;
+
 $button-height: 27px;
 $button-width: 35px;
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+html, body{
+  overflow: hidden;
+}
 
 body {
   background: $color-background;
@@ -17,10 +31,11 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  top: 40%;
+  top: 0;
   left: 0;
   margin:  0 auto;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 
   p {
     font-size: 20px;
@@ -207,5 +222,78 @@ h1 {
   100% {
     opacity: 1;
     left: 0;
+  }
+}
+
+// Index Page Styles
+a{
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 40px 0;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 1000;
+    
+    a{
+        color: #ff6868;
+    }
+    .name {
+        font-size: 2.2rem;
+        letter-spacing: 0.1em;
+        position: relative;
+        z-index: 1000;
+        @media screen and (max-width: 420px) {
+          font-size: 1.4rem;
+        }
+    }
+    .icons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-right: 6.4rem;
+      @media screen and (max-width: 420px) {
+        display: none;
+      }
+
+      a {
+        display: block;
+        margin-right: 3.2rem;
+        font-size: 1.8rem;
+        letter-spacing: 0.1em
+      }
+    }
+    .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative
+    }
+}
+.landing{
+  background: url('http://www.supah.it/dribbble/008/008.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .landing_text{
+    position: absolute;
+    top: 40%;
+    right: 30%;
   }
 }
