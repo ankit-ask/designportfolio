@@ -374,3 +374,28 @@ header{
 #fp-nav ul li:hover a span{
   margin: 0 !important;
 }
+
+.layer1{
+  img{
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    width: 60vh;
+  }
+}
+
+.intro{
+  font-weight: bolder;
+    font-family: 'Montserrat','Raleway';
+    
+  h1{
+    font-size: 7em;
+    margin-left:20%;
+    text-align: left;
+  }
+  p{
+    font-size: 3em;
+    margin-left:20%;
+    text-align: left;
+  }
+}
