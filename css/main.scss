@@ -358,7 +358,24 @@ header{
   width: 100%;
   height: 100vh;
 }
-
+#fp-nav{
+  ul{
+    @media screen and (max-width:420px) {
+      // margin-left: -20px !important;
+      // margin-bottom: -100px !important;
+      position: fixed !important;
+      bottom: -350px !important;
+      left: 160px !important;
+      transform: rotate(-90deg) !important;
+      
+      li{
+        margin-bottom: 20px !important;
+        margin-left: -30px !important;
+      }
+    }
+  }
+  
+}
 #fp-nav ul li a.active span,
 #fp-nav ul li:hover a.active span{
   height: 4px !important;
@@ -381,6 +398,13 @@ header{
     top: 20%;
     right: 10%;
     width: 60vh;
+
+    @media screen and (max-width:420px) {
+      top: 20%;
+      right: 20%;
+      width: 30vh;
+    }
+
   }
 }
 
@@ -392,10 +416,29 @@ header{
     font-size: 7em;
     margin-left:20%;
     text-align: left;
+    
+    @media screen and (max-width:420px) {
+      font-size: 3em;
+      margin-left:20%;
+      margin-top: 70%;
+    }
+
   }
   p{
     font-size: 3em;
     margin-left:20%;
     text-align: left;
+
+    @media screen and (max-width:420px) {
+      font-size: 1em;
+      margin-left:20%;
+    }
+
+  }
+}
+
+#fullpage{
+  @media screen and (max-width:420px) {
+    navigationPosition: 'bottom'
   }
 }
