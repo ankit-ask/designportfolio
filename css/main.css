@@ -305,25 +305,6 @@ header .wrap {
   position: relative;
 }
 
-.landing {
-  background: url("http://www.supah.it/dribbble/008/008.jpg") no-repeat center center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.landing .landing_text {
-  position: absolute;
-  top: 40%;
-  right: 30%;
-}
-
 .scrollDown {
   position: fixed;
   font-size: 1rem;
@@ -364,5 +345,43 @@ header .wrap {
     height: 32px;
     bottom: -40px;
   }
+}
+
+.fullpage__slide {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+.landing {
+  background: url("https://cdn.dribbble.com/users/1461762/screenshots/5272494/blue_lana_marandina.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span {
+  height: 4px !important;
+  width: 40px !important;
+  border-radius: 10px !important;
+}
+
+#fp-nav ul li a span {
+  border-radius: 10px !important;
+  height: 4px !important;
+  width: 20px !important;
+  margin: 0 !important;
+}
+
+#fp-nav ul li:hover a span {
+  margin: 0 !important;
 }
 /*# sourceMappingURL=main.css.map */
