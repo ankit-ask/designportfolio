@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Vollkorn|Roboto);
+// @import url(https://fonts.googleapis.com/css?family=Montserrat|Vollkorn|Roboto);
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 $color-background: #F5F5F5;
 $color-main: #FF5252;
@@ -34,7 +35,7 @@ body {
   top: 0;
   left: 0;
   margin:  0 auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow: hidden;
 
   p {
@@ -73,7 +74,7 @@ body {
 h1 {
   position: relative;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .button_container {
@@ -165,7 +166,7 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    font-family: 'Montserrat', serif;
+    font-family: 'Poppins', serif;
     font-weight: 400;
     text-align: center;
   }
@@ -248,7 +249,8 @@ header{
         color: #ff6868;
     }
     .name {
-        font-size: 2.2rem;
+      font-family: 'Poppins';
+        font-size: 2rem;
         letter-spacing: 0.1em;
         position: relative;
         z-index: 1000;
@@ -352,7 +354,7 @@ header{
 // }
 
 .landing{
-  background: url('https://cdn.dribbble.com/users/1461762/screenshots/5272494/blue_lana_marandina.png') no-repeat center center;
+  // background: url('https://cdn.dribbble.com/users/1461762/screenshots/5272494/blue_lana_marandina.png') no-repeat center center;
   //background: url('https://cdn.dribbble.com/users/116493/screenshots/4260134/devstory_dribbble_01.gif') center center no-repeat;
   background-size: cover;
   width: 100%;
@@ -410,10 +412,10 @@ header{
 
 .intro{
   font-weight: bolder;
-    font-family: 'Montserrat','Raleway';
+    font-family: 'Poppins','Raleway';
     
   h1{
-    font-size: 7em;
+    font-size: 4em;
     margin-left:20%;
     text-align: left;
     
@@ -424,8 +426,21 @@ header{
     }
 
   }
+  .hello{
+    font-size: 1.5em;
+    
+    &:after {
+      content: '';
+      width: 250px;
+      height: 2px;
+      position: absolute;
+      top: 40.5%;
+      left: 26%;
+      background: #000000;
+    }
+  }
   p{
-    font-size: 3em;
+    font-size: 2em;
     margin-left:20%;
     text-align: left;
 
@@ -441,4 +456,61 @@ header{
   @media screen and (max-width:420px) {
     navigationPosition: 'bottom'
   }
+}
+
+.about-section{
+  position: absolute;
+  right: 2%;
+  width: 50%
+}
+
+// Home Page- Footer
+.footer-social{
+  color: rgb(34, 32, 32);
+}
+
+//Home Page - About Us Section
+.about-section-left{
+  img{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 60vh;
+
+    // @media screen and (max-width:420px) {
+    //   top: 20%;
+    //   right: 20%;
+    //   width: 30vh;
+    // }
+
+  }
+}
+
+.about-section-right{
+  position: absolute;
+  right: 5%;
+  width: 40vw;
+}
+
+//Home Page - Work Section
+.work-section-left{
+  img{
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    width: 60vh;
+
+    // @media screen and (max-width:420px) {
+    //   top: 20%;
+    //   right: 20%;
+    //   width: 30vh;
+    // }
+
+  }
+}
+
+.work-section-right{
+  position: absolute;
+  left: 6%;
+  width: 40vw;
 }
