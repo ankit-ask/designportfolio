@@ -367,6 +367,20 @@ header .wrap {
   height: 100vh;
 }
 
+@media screen and (max-width: 420px) {
+  #fp-nav ul {
+    position: fixed !important;
+    bottom: -350px !important;
+    left: 160px !important;
+    -webkit-transform: rotate(-90deg) !important;
+            transform: rotate(-90deg) !important;
+  }
+  #fp-nav ul li {
+    margin-bottom: 20px !important;
+    margin-left: -30px !important;
+  }
+}
+
 #fp-nav ul li a.active span,
 #fp-nav ul li:hover a.active span {
   height: 4px !important;
@@ -383,5 +397,58 @@ header .wrap {
 
 #fp-nav ul li:hover a span {
   margin: 0 !important;
+}
+
+.layer1 img {
+  position: fixed;
+  top: 20%;
+  right: 10%;
+  width: 60vh;
+}
+
+@media screen and (max-width: 420px) {
+  .layer1 img {
+    top: 20%;
+    right: 20%;
+    width: 30vh;
+  }
+}
+
+.intro {
+  font-weight: bolder;
+  font-family: 'Montserrat','Raleway';
+}
+
+.intro h1 {
+  font-size: 7em;
+  margin-left: 20%;
+  text-align: left;
+}
+
+@media screen and (max-width: 420px) {
+  .intro h1 {
+    font-size: 3em;
+    margin-left: 20%;
+    margin-top: 70%;
+  }
+}
+
+.intro p {
+  font-size: 3em;
+  margin-left: 20%;
+  text-align: left;
+}
+
+@media screen and (max-width: 420px) {
+  .intro p {
+    font-size: 1em;
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #fullpage {
+    navigationPosition: 'bottom';
+  }
 }
 /*# sourceMappingURL=main.css.map */
