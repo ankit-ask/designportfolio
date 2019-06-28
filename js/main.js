@@ -18,7 +18,7 @@ function animate() {
   
   translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
 
-  $('.landing').css({
+  $('.movableBG').css({
     '-webit-transform': translate,
     '-moz-transform': translate,
     'transform': translate
@@ -30,13 +30,18 @@ function animate() {
 $(window).on('mousemove click', function(e) {
 
   var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-  var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+  var moveY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
   lFollowX = (40 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
   lFollowY = (20 * lMouseY) / 100;
 
-//   lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+//  lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
 //   lFollowY = (10 * lMouseY) / 100;
 
 });
+// $(div .movableBG).mousemove(function(e){
+//   var moveX = (e.pageX * -1 / 15);
+//   var moveY = (e.pageY * -1 / 15);
+//   $(this).css('background-position', moveX + 'px ' + lFollowY + 'px')
+// });
 
 animate();
