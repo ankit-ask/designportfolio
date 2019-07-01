@@ -511,4 +511,18 @@ header .wrap {
   left: 6%;
   width: 40vw;
 }
+
+.work-main {
+  height: 100vh;
+  background: url(../assets/img/bg-temp.png) no-repeat center center;
+  background-size: cover;
+}
+
+.work-main .work-hero {
+  padding-top: 20%;
+}
+
+.work-main .work-collage {
+  margin-top: 10%;
+}
 /*# sourceMappingURL=main.css.map */

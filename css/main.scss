@@ -537,3 +537,23 @@ header{
   left: 6%;
   width: 40vw;
 }
+
+
+// Work Page Styles
+.work-main{
+  height: 100vh;
+  background: url(../assets/img/bg-temp.png) no-repeat center center;
+  background-size: cover;
+
+  .work-hero{
+    padding-top: 20%;
+  }
+
+  .work-collage{
+    margin-top: 10%;
+
+    .collage-item-big{
+      
+    }
+  }
+}
