@@ -1,27 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow: auto" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio | Work</title>
+    <title>Portfolio | Home</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="node_modules/barba.js/dist/barba.min.js"></script>
 
-    <!-- <link rel="stylesheet" type="text/css" href="src/fullpage.css" /> -->
-    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-    <!-- <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+    header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 40px 0;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 1000;
+    }
+    header a{
+        color: #1a1a1a;
+    }
+    header .name {
+      background: -webkit-linear-gradient(#FF3B16, #F90062);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Poppins';
+      font-size: 32px;
+      letter-spacing: 0.1em;
+      position: relative;
+      z-index: 1000;
+    }
+    header .icons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-right: 20px;
+      }
 
-    <!-- <script type="text/javascript" src="src/fullpage.js"></script> -->
+      header .icons a {
+        display: block;
+        margin-right: 30px;
+        margin-top: -3px;
+        font-size: 26px;
+        letter-spacing: 0.1em
+      }
+    header .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative
+    }
 
-    <link rel="stylesheet" href="vendors/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendors/owlcarousel/assets/owl.theme.default.min.css">
+/* Overlay Style */
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
+.img-hover-overlay:after, .img-hover-overlay:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.img-hover-overlay:after {
+    content:'';
+    width:calc(100% - 30px); height:100%;
+    top:0; left:15px;
+    background:rgba(0,0,0,0.6);
+}
+.img-hover-overlay:before {
+    content: attr(data-content);
+    width:100%;
+    color:#fff;
+    z-index:1;
+    bottom:30px;
+    padding:4px 10px;
+    text-align:center;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+.img-hover-overlay:hover:after, .img-hover-overlay:hover:before {
+    opacity:1;
+}
+    </style>
 </head>
 <body>
     <header>
@@ -43,73 +114,113 @@
         <div class="overlay" id="overlay" style="z-index: 2">
             <nav class="overlay-menu">
                 <ul>
-                <li ><a href="index3.html">Home</a></li>
-                <li><a href="#">Works</a></li>
+                <li ><a href="#">Home</a></li>
+                <li><a href="work.html">Works</a></li>
                 <li><a href="#">About Me</a></li>
-                <li><a href="index3.html#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="movableBG"></div>
-    <div>
-            <div class="work-hero">
-                <h1></h1>
-
-
-                <!-- <div class="owl-carousel">
-                    
-                    <div class="intro hello-name" style="margin: 0 auto; width: 60%">
-                        <p class="hello" style="text-align: center">HELLO! I'M</p>
-                        <h1 style="text-align: center">ANKITA SINGH</h1>
-                    </div>
-                    <div class="intro hello-name" style="margin: 0 auto;  width: 60%">
-                        <p class="hello" style="text-align: center">I'M AN</p>
-                        <h1 style="text-align: center">Interaction Designer</h1>
-                    </div>
-                </div> -->
-                <div class="scrollDown">SCROLL DOWN</div>
-
-            </div>
-
-            <div class="work-collage">
-
-                <div>
-                    <h1>ABOUT ME</h1>
-                    <p>Lorem, ipsum dolor.</p>
+    <div class="work-wrapper">
+        <section class="work-hero">
+                <div class="intro hello-name hero-title" style="margin: 0 auto;  width: 60%">
+                    <p class="hello" style="text-align: center">Have a look at</p>
+                    <h1 style="text-align: center">MY WORK</h1>
                 </div>
-                
+                <div class="scrollDown">SCROLL DOWN</div>
+        </section>
+
+        <section class="work-collage col-lg-12">
+            <div class="intro hello-name hero-title" style="margin: 0 auto;  width: 60%">
+                <h1 style="text-align: center">LATEST WORKS</h1>
+                <p class="hello" style="text-align: center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
+
+            <div class="collage-wrapper">
+                    <div class="row col-lg-12">
+                        
+                        <div class="col-lg-6 col-sm-6 col-sm-12">
+                            <div data-content="Caption" class="grid-6by6 img-hover-overlay">
+                                <img src="assets/img/work1.jpg">
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-sm-6 col-sm-12" style="padding: 0">
+                                <div class="col-lg-6 col-sm-6 col-sm-12">
+                                        <div data-content="Caption" class="grid-3by3 img-hover-overlay">
+                                            <img src="assets/img/work2.jpg">
+                                        </div>
+                                </div>
+    
+                                <div class="col-lg-6 col-sm-6 col-sm-12">
+                                        <div data-content="Caption" class="grid-3by3 img-hover-overlay">
+                                            <img src="assets/img/work3.jpg">
+                                        </div>
+                                </div>
+                                
+                                <div class="col-lg-12 col-sm-6 col-sm-12" style="margin-top: 25px;">
+                                        <div data-content="Caption" class="grid-3by3 img-hover-overlay">
+                                            <img src="assets/img/work5.jpg">
+                                        </div>
+                                </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row col-lg-12" style="margin-top: 35px">
+
+
+                        <div class="col-lg-6 col-sm-6" style="padding: 0">
+
+                                <div class="col-lg-12 col-sm-6 col-sm-12">
+                                        <div data-content="Caption" class="grid-3by3  img-hover-overlay">
+                                            <img src="assets/img/work5.jpg">
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6 col-sm-12" style="margin-top: 25px;">
+                                        <div data-content="Caption" class="grid-6by6  img-hover-overlay">
+                                            <img src="assets/img/work1.jpg">
+                                        </div>
+                                </div>
+    
+                                <div class="col-lg-6 col-sm-6 col-sm-12" style="margin-top: 25px;">
+                                        <div data-content="Caption" class="grid-6by6  img-hover-overlay">
+                                            <img src="assets/img/work1.jpg">
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                                <div data-content="Caption" class="grid-6by6  img-hover-overlay">
+                                    <img src="assets/img/work1.jpg">
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <section class="col-lg-12" style="padding: 20% 0">
+                <div class="intro hello-name" style="margin: 0 auto;  width: 60%">
+                    
+                    <div class="wrap home-contact-footer" style="text-align: center">
+                        <div class="icons">
+                            <span><a href="#" target="_blank" style="position: relative; left: 0; top: 14px"><i class="fab fa-dribbble"></i></a></span>
+                            <span><a href="#" target="_blank" style="position: relative; left: 0; top: 14px"><i class="fab fa-linkedin"></i></a></span>
+                            <span><a href="#" target="_blank" style="position: relative; left: 0; top: 14px"><i class="fab fa-twitter"></i></a></span>
+                        </div>
+                        <div class="menuIcon js-menuBtn"></div>
+                    </div>
+
+                    <h1 style="text-align: center">Contact Me</h1>
+                    <p class="hello" style="text-align: center">Email: ankita.singh211292@gmail.com</p>
+                    <p class="hello" style="text-align: center">Phone: +91 - 8989419279</p>
+                </div>
+        </section>
+        
+        
     </div>
-
-    <script src="vendors/owlcarousel/owl.carousel.min.js"></script>
-    <script type="text/javascript">
-        // var myFullpage = new fullpage('#fullpage', {
-        //     anchors: ['top', 'work', 'about', 'contact'],
-        //     sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent'],
-        //     scrollingSpeed: '700',
-        //     navigation: true,
-        //     navigationPosition: 'left',
-        //     navigationTooltips: ['First page', 'Second page', 'Third and last page']
-        // });
-
-        //Owl Carousel Script
-        // $(document).ready(function(){
-        // $(".owl-carousel").owlCarousel({
-        //     center: true,
-        //     loop:true,
-        //     autoplay:true,
-        //     autoplayTimeout:3000,
-        //     autoplayHoverPause:true,
-        //     animateOut: 'zoomOut',
-        //     animateIn: 'zoomIn',
-        //     responsive:{
-        //         0:{
-        //             items:1
-        //         }
-        //     }
-        // });
-        // });
-    </script>
 </body>
 </html>

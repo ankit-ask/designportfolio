@@ -136,7 +136,7 @@ h1 {
 }
 
 .overlay.open {
-  opacity: .9;
+  opacity: 1;
   visibility: visible;
   height: 100%;
 }
@@ -266,7 +266,9 @@ header a {
 }
 
 header .name {
-  color: #ff4f4f;
+  background: -webkit-linear-gradient(#FF3B16, #F90062);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: 'Poppins';
   font-size: 2rem;
   letter-spacing: 0.1em;
@@ -338,7 +340,7 @@ header .wrap {
 .scrollDown:after {
   content: "";
   width: 2px;
-  height: 64px;
+  height: 40px;
   background: #1a1a1a;
   position: absolute;
   left: 0;
@@ -501,28 +503,153 @@ header .wrap {
 
 .work-section-left img {
   position: absolute;
-  top: 20%;
-  right: 15%;
-  width: 60vh;
+  top: 12%;
+  right: 0;
+  width: 50vw;
 }
 
 .work-section-right {
   position: absolute;
-  left: 6%;
-  width: 40vw;
+  left: 8%;
+  width: 32vw;
+  margin-top: -140px;
 }
 
-.work-main {
+.work-section-right h1 {
+  padding-bottom: 20px;
+}
+
+.work-section-right p {
+  margin-top: 20px;
+  font-size: 1.6em;
+}
+
+.work-section-right button {
+  margin-top: 25px;
+  padding: 15px 50px;
+  background: #FFB495;
+  color: #474747;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Poppins';
+  font-size: 1.2em;
+  font-weight: 600;
+  -webkit-box-shadow: 0 0 5px #dbdbdb;
+          box-shadow: 0 0 5px #dbdbdb;
+}
+
+.count {
+  position: absolute;
+  bottom: 80px;
+  right: 40px;
+  font-family: 'Poppins';
+  font-size: 8em;
+  letter-spacing: 10px;
+  font-weight: bolder;
+  color: #F5F5F5;
+}
+
+.home-contact-footer .icons {
+  margin-top: 20px;
+}
+
+.home-contact-footer .icons span {
+  background: #FFB495;
+  border-radius: 50%;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.home-contact-footer .icons a {
+  color: #1a1a1a;
+  font-size: 1.8em;
+  position: relative;
+  top: 8px;
+  left: 16px;
+}
+
+.work-wrapper .work-hero {
   height: 100vh;
   background: url(../assets/img/bg-temp.png) no-repeat center center;
   background-size: cover;
 }
 
-.work-main .work-hero {
-  padding-top: 20%;
+.work-wrapper .work-hero .hero-title {
+  padding-top: 25% !important;
 }
 
-.work-main .work-collage {
-  margin-top: 10%;
+.work-wrapper .work-collage {
+  height: 100%;
+}
+
+.work-wrapper .work-collage .hero-title {
+  padding-top: 40px !important;
+}
+
+.work-wrapper .grid-6by6 img {
+  width: 100%;
+  height: 100%;
+}
+
+.work-wrapper .grid-3by6 img {
+  width: 100%;
+  height: 100%;
+}
+
+.work-wrapper .grid-3by3 img {
+  width: 100%;
+  height: 100%;
+}
+
+.work-wrapper .scrollDown {
+  position: absolute;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  bottom: 80px;
+  left: 40px;
+  line-height: 1;
+  letter-spacing: 0.3em;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  color: #1a1a1a;
+  z-index: 100;
+}
+
+@media screen and (max-width: 420px) {
+  .work-wrapper .scrollDown {
+    left: auto;
+    right: 6.25%;
+    font-size: 0.6rem;
+    bottom: 40px;
+  }
+}
+
+.work-wrapper .scrollDown:after {
+  content: "";
+  width: 2px;
+  height: 40px;
+  background: #1a1a1a;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 180px;
+}
+
+@media screen and (max-width: 420px) {
+  .work-wrapper .scrollDown:after {
+    height: 32px;
+    bottom: -40px;
+  }
+}
+
+.collage-wrapper {
+  padding: 80px 180px;
 }
 /*# sourceMappingURL=main.css.map */
