@@ -652,4 +652,15 @@ header .wrap {
 .collage-wrapper {
   padding: 80px 180px;
 }
+
+/* Sticky Header */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+  padding-bottom: 20px;
+}
 /*# sourceMappingURL=main.css.map */

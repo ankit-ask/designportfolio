@@ -95,8 +95,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <a href="./" class="name" style="z-index: 1">ANKITA SINGH</a>
+    <header class="header" id="stickyHeader">
+        <a href="index.html" class="name" style="z-index: 1">ANKITA SINGH</a>
         <div class="wrap">
             <div class="icons">
                 <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
@@ -114,10 +114,10 @@
         <div class="overlay" id="overlay" style="z-index: 2">
             <nav class="overlay-menu">
                 <ul>
-                <li ><a href="#">Home</a></li>
-                <li><a href="work.html">Works</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -202,7 +202,7 @@
                 </div>
         </section>
 
-        <section class="col-lg-12" style="padding: 20% 0">
+        <section class="col-lg-12" style="padding: 15% 0">
                 <div class="intro hello-name" style="margin: 0 auto;  width: 60%">
                     
                     <div class="wrap home-contact-footer" style="text-align: center">
@@ -222,5 +222,21 @@
         
         
     </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("stickyHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+          console.log('scrolled');
+        }
+        </script>
 </body>
 </html>
